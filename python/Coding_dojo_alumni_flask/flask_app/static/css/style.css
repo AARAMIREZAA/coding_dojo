@@ -1,0 +1,84 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container{
+    background-color: #121212;
+}
+
+.dropdown_nav{
+    background-color: blueviolet;
+}
+
+.nav{
+    color: #6c757d;
+    padding: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav1{
+    color: white;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navcolor{
+    color: #7d9ce4;
+}
+
+
+.main_body{
+    padding-top: 2rem;
+    background-color:  #121212; 
+}
+
+.sub-contentLeft{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    align-self: flex-start;
+    background-color: white;
+    width: 700px;
+}
+.sub-contentRight{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: white;
+    width: 700px;
+    height: 900px;
+}
+/* .sub-content{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: lightyellow;
+    width: 700px;
+    height: 500px;
+} */
+img{
+    height: 100px;
+}
+.course1{
+    padding: 15px;
+    
+}
+.course2{
+    padding: 2rem;
+}
+.course3{
+    padding: 1rem;
+}
+.text1{
+    padding: 1.5rem;
+}
+.text2{
+    padding: 1.5rem;
+}

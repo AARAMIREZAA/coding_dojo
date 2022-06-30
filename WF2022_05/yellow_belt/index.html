@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shelter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container flex">
+            <div class="flex">
+                <img class="img1" src="./pet-shelter/images/heart-light.png" alt="White Heart emoji">
+                <h1>Pet Shelter</h1>
+            </div>
+            <ul class="flex1 edit-list">
+                <li> Find a pet
+                <li>About</li>
+            </ul>
+            <div>
+                <button class="donation" onclick="disappear(this)">Donate</button>
+            </div>
+        </div>
+        <div class="container2 flex2 text-style">
+            <h2>Im Looking for a...</h2>
+            <h3>In or near...</h3>
+        </div>
+        <div class="container flex">
+            <div class="dropdown flex">
+                <img class="paw" src="./pet-shelter/images/paw-light.png" alt="paw print">
+                <button class="dropbtn">Any Pet</button>
+                <div class="dropdown-content">
+                    <a onclick="petalert()" href="#">Dogs</a>
+                    <a onclick="petalert1()" href="#">Cats</a>
+                    <a onclick="petalert2()" href="#">Birds</a>
+                </div>
+            </div>
+            <div>
+                <img class="pin" src="./pet-shelter/images/pin-light.png" alt="Pin location">
+                <input type="text" name="Location">
+            </div>
+            <button class="findPet">Find your new best friend</button>
+        </div>
+    </header>
+    <div class="main">
+        <div class="pepper">
+            <img class="img2" src="./pet-shelter/images/pepper.jpg" alt="pepper the cat">
+            <div class="flex lttrsize">
+                <h2>Pepper</h2>
+                <p><span id="add1">3</span> Petting(s)</p>
+            </div>
+            <div class="flex">
+                <p class="lttrsize">Pepper is a slightly shy grey tabby, but she really loves showing her human
+                    affection</p>
+                <button class="petbtn" onclick="addlikes(add1)">Pet Pepper</button>
+            </div>
+        </div>
+        <div class="bruce">
+            <img class="img2" src="./pet-shelter/images/bruce.jpg" alt="bruce the dog">
+            <div class="flex">
+                <h2>Bruce</h2>
+                <p><span id="add2">5</span> Petting(s)</p>
+            </div>
+            <div class="flex">
+                <p class="lttrsize">Bruce is a loyal companion. He loves long walks and cold weather</p>
+                <button class="petbtn" onclick="addlikes(add2)">Pet Bruce</button>
+            </div>
+        </div>
+        <div class="oscar">
+            <img class="img2" src="./pet-shelter/images/oscar.jpg" alt="oscar the dog">
+            <div class="flex">
+                <h2>Oscar</h2>
+                <p><span id="add3">8</span> Petting(s)</p>
+            </div>
+            <div class="flex">
+                <p class="lttrsize">Oscar is bright, energetic and friendly. He is looking for a good home</p>
+                <button class="petbtn" onclick="addlikes(add3)">Pet Oscar</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

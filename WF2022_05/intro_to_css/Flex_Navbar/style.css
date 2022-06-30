@@ -1,0 +1,32 @@
+.nav-title{
+    background-color: #333;
+    color: white;
+    width: 200px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.nav{
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+}
+.nav-links{
+    width: 400px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.active{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+.btn{
+    color: white;
+    background-color: #16a1b7;
+    border: 1px solid black;
+    box-shadow: 5px 5px black;
+}

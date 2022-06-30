@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.flex{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: .5rem;
+}
+.container{
+    margin: 50px 1000px 0 50px;
+    border: 1px solid black;
+    align-self: center;
+}
+.words{
+    text-align: center;
+}
+.like{
+    background-color: #ffd966;
+    color: black;
+    width: 50px;
+    border: 1px solid black;
+    box-shadow: 5px 5px black;
+}

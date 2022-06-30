@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    font-size: xx-large;
+}
+h2{
+    text-align: center;
+}
+a{
+    display: block; 
+    text-align: center;
+}

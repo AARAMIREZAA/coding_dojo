@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+.container{
+    width: 800px;
+    min-height: 500px;
+    margin: auto;
+}
+header{
+    background-color: black;
+    padding: 1rem;
+    color: white;
+}
+h1{
+    text-align: center;
+}
+img{
+    height: 120px;
+}
+.edit{
+    border: 1px solid black;
+    padding: 20px;
+    margin: 0 auto;
+}
+.fix{
+    margin: 10px;
+}
+.like1{
+    background-color: #ffd966;
+    color: black;
+    width: 50px;
+    border: 1px solid black;
+    box-shadow: 5px 5px black;
+}

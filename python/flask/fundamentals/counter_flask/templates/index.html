@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='JavaScript/script.js') }}"></script>
+    <title>Counter</title>
+</head>
+<body>
+
+    <h1>COUNTER</h1>
+    <h2><span>{{session['count']}}</span> times</h2>
+    <a  href="/" >up</a>
+    <a  href="/add_two">add</a>
+    <a  href="/destroy_session">reset</a>
+
+</body>
+</html>

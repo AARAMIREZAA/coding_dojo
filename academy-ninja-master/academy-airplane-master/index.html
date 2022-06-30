@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style type="text/css">
+		#ocean {
+			background-image: url(ocean.jpg);
+			width: 900px;
+			height: 700px;
+		}
+		.player {
+			position: absolute;
+			background-image: url("player.png");
+			width: 70px;
+			height: 75;
+		}
+		.enemy{
+			position: absolute;
+			background-image: url("enemy.png");
+			width: 70px;
+			height: 75;
+		}
+	</style>
+
+	<div id="ocean">
+		<div id="players"></div>
+		<div id="enemies"></div>
+	</div>
+
+	<script type="text/javascript">
+
+		var player = {
+			left: 450,
+			top: 620
+		}
+		var	enemies = [
+			{left: 350, top: 200},
+			{left: 450, top: 250}
+		]
+
+		function drawplayer(){
+			content = "<div class='player'style='left:"+
+				player.left+"px; top:"+player.top+"px'></div>";
+		document.getElementById("players").innerHTML = 
+				content;
+		}
+		drawplayer();
+
+		function drawEnemies(){
+			content	= "";
+			console.log(enemies)
+			for(var idx=0; idx<enemies.lenght++){
+				content + = "<div class='enemy'style='left:"+
+				enemies[idx].left+"px; top:"+enemies[idx].top+"px'></div>";
+			}
+			document.getElementById("enemies").innerHTML = 
+				content;
+		}
+		drawEnemies();
+
+		document.onkeydown = function(e){
+			console.log(e);
+			if (e.keycode == 37) { //left
+				player.left == player.left - 10;
+			}
+			if (e.keycode == 39) { //right
+				player.left = player.left + 10
+			}
+			if (e.keycode == 38) { //down
+				player.left = player.left - 10
+			}
+			if (e.keycode == 40) { //up
+				player.left = player.left + 10
+			}
+			drawplayer();
+		}
+
+	</script>
+
+
+</body>
+</html>

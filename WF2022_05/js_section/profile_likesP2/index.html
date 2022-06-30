@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Clicker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header> Network</header>
+        <h1> Your Feed</h1>
+        <div class="flex">
+            <div class="edit">
+                <div><img src="./icons/user-circle.png" alt=""></div>
+                <div class="fix"><a href="#">Add an avatar</a></div>
+                <div class="fix">
+                    <p>James Doe</p>
+                </div>
+            </div>
+            <div>
+                <div class="fix edit">
+                    <div class="flex">
+                        <p>Neil M</p>
+                        <p><span id="add">9</span> Like(s)</p>
+                        <button onclick="addlikes(add)" class="like1">Like</button>
+                    </div>
+                    <div class="fix">
+                        <p>I just set up this new discord bot, let me know what you all think. <a href="#">Link</a></p>
+                    </div>
+                </div>
+                <div class="fix edit">
+                    <div class="flex">
+                        <p>Nichole K</p>
+                        <p><span id="add2">12</span> Like(s)</p>
+                        <button onclick="addlikes(add2)" class="like1">Like</button>
+                    </div>
+                    <div class="fix">
+                        <p>Just finished my <a href="#">next comic,</a>check it out</p>
+                    </div>
+                </div>
+                <div class="fix edit">
+                    <div class="flex">
+                        <p>Jim R</p>
+                        <p><span id="add3">9</span> Like(s)</p>
+                        <button class="like1" onclick="addlikes(add3)">Like</button>
+                    </div>
+                    <div class="fix">
+                        <p>I can't stop listening to the<a href="#">new album</a>Who else is liking it?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+#look{
+    background-color: white;
+    color: cornflowerblue;
+    border: 2px solid cornflowerblue;
+    border-radius: 16px;
+    text-align: center;
+    padding: 5px 20px;
+    
+}
+#look:hover{
+    cursor: pointer;
+}
+#plus{
+    background-color: aqua;
+    color: white;
+    border-radius: 50%;
+    border: 2px solid aqua;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    
+}
+#create{
+    background-color: lightskyblue;
+    color: white;
+    border: 1px solid black;
+    box-shadow: 5px 5px black;
+}

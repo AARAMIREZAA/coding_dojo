@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>NinjaMan</title>
+</head>
+<body>
+	<div style="background-color: red; margin: 10px;
+		padding: 10px"></div>
+	<div style="background-color: red; margin: 10px;
+		padding: 10px"></dive>
+	<div style="background-color: red; margin: 10px;
+		padding: 10px"></div>
+	<div style="background-color: red; margin: 10px;
+		padding: 10px"></dive>
+	<div style="background-color: red; margin: 10px;
+		padding: 10px"></dive>
+</body>
+</html>

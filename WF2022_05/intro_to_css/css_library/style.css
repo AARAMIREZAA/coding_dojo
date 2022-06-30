@@ -1,0 +1,106 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fixed width container class that will "auto-center" itself */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.nav-title{
+    background-color: #333;
+    color: white;
+    width: 200px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.nav{
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+}
+.nav-links{
+    width: 400px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.active{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+.btn{
+    color: white;
+    background-color: #16a1b7;
+    border: 1px solid black;
+    box-shadow: 5px 5px black;
+}
+.row{
+    display: flex;
+}
+.col{
+    padding: 20px;
+    margin: 10px;
+    background-color: lightcyan;
+    flex: 1;
+}
+.col-2{
+    padding: 20px;
+    margin: 10px;
+    background-color: lightblue;
+    flex: 2;
+}
+.col-3{
+    padding: 20px;
+    margin: 10px;
+    background-color: lightblue;
+    flex: 3;
+}
+#container{
+    width: 550px;
+    margin: 0 auto;
+}
+.row1{
+    display: flex;
+    height: 75px;
+    background-color: #54c5f4;
+}
+#pfp{
+    position: relative;
+    top: 40px;
+    left: 20px;
+}
+#bottom{
+    background-color: lightcyan;
+    border-color: 2px black;
+    border-style: solid;
+    border-color: #54c5f4 black black black;   
+    padding: 3.5rem 1rem 1rem;
+}
+.flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .5rem;
+}
+.margin{
+    margin-bottom: 1rem;
+}
+.size{
+    height: 50px;
+}
+
+
+.btn {
+    background-color: lightskyblue;
+    color: white;
+    border: 1px solid black;
+    box-shadow: 5px 5px black;
+}

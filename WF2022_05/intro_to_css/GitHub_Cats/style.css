@@ -1,0 +1,31 @@
+h1{
+    color: blue;
+    text-align: center;
+}
+#space{
+    width: 400px;
+    background-color: silver;
+    margin: 10px auto;
+}
+img{
+    height: 100px;
+}
+.row{
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+#cats{
+    background-color: #54c5f4;
+    justify-content: space-around;
+}
+#cats1{
+    background-color: #d5abbe;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#cats2{
+    background-color: #fcfcf8;
+    justify-content: space-around;
+}

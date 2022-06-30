@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: whitesmoke;
+    width: 1000px;
+    min-height: 1500px;
+    margin: auto;
+}
+h1{
+    color: white;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+.active{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+.btn{
+    color: white;
+    background-color: #16a1b7;
+    border: 1px solid  black;
+    box-shadow: 5px 5px black;
+}
+.top{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+.top1{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.5rem;
+    list-style: none;
+}
+.profile{
+    position: relative;
+    left: 130px;
+    padding: 3rem;
+    width: 400px;
+}
+.row1{
+    display: flex;
+    height: 75px;
+    background-color: #54c5f4;
+}
+#pfp{
+    position: relative;
+    top: 40px;
+    left: 20px;
+}
+#bottom{
+    height: 250px;
+    background-color: lightcyan;
+    border-color: 2px black;
+    border-style: solid;
+    border-color: #54c5f4 black black black;   
+}
+.name{
+    position: relative;
+    left: 10px;
+    top: 40px;
+    font-size: xx-large
+}
+.marker{
+    position: relative;
+    top: 65px;
+    left: 10px;
+}
+.cred1{
+    position: relative;
+    top: 80px;
+    left: 10px;
+}
+.gear{
+    color: #16a1b7;
+    text-decoration: underline;
+    position: relative;
+    top: 100px;
+    left: 10px;
+}
+
+.education{
+    position: relative;
+    right: 50px;
+}
+.education1{
+    padding: 3rem;
+    width: 400px;
+}
+.bar{
+    display: flex;
+    height: 35px;
+    background-color: black;
+}
+.edu1{
+    position: relative;
+    top: 12px;
+    left: 5px;
+    color: white;
+
+}
+#bar{
+    height: 250px;
+    background-color: lightcyan;
+    border-color: 2px black;
+    border-style: solid;
+    border-color: black black black black;   
+}
+.bar1{
+    position: relative;
+    left: 10px;
+    top: 40px;
+    font-size: xx-large
+}
+.stats{
+    position: relative;
+    top: 50px;
+    left: 10px;
+}
+.stats1{
+    color: gray;
+}
+
+.requestsTop{
+    position: relative;
+    left: 350px;
+    bottom: 705px;
+}
+.TB{
+    height: 100px;
+    width: 300px;
+    background-color: black;
+}
+#plus{
+    position: relative;
+    right: 220px;
+    top: 30px;
+    background-color: #54c5f4;
+    color: white;
+    border-radius: 50%;
+    border: 2px solid #54c5f4;
+    text-align: center;
+    font-size:x-large;
+    width: 40px;
+    height: 40px;
+}
+.numberof{
+    position: relative;
+    color: white;
+    text-align: right;
+    font-size: X-large;
+    right: 20px;
+    
+}
+.requestsBotm{
+    width: 300px;
+    height: 150px;
+    background-color: lightcyan;
+    border-color: 2px black;
+    border-style: solid;
+    border-color: black black black black;   
+}
+.img1{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.img2{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.acc1{
+    position: relative;
+    left: 80px;
+    bottom: 130px;
+    font-size: xx-large;
+}
+.acc2{
+    position: relative;
+    bottom: 100px;
+    left: 80px;
+    font-size: xx-large;
+}
+
+.TB1{
+    height: 100px;
+    width: 300px;
+    background-color: black;
+}
+#plus1{
+    position: relative;
+    right: 200px;
+    top: 30px;
+    background-color: #54c5f4;
+    color: white;
+    border-radius: 50%;
+    border: 2px solid #54c5f4;
+    text-align: center;
+    font-size:x-large;
+    width: 60px;
+    height: 40px;
+}
+.rej{
+    position: relative;
+    bottom: 210px;
+    left: 190px;
+}
+.rej1{
+    height: 50px;
+}
+.rej2{
+    position: relative;
+    bottom: 200px;
+    left: 190px;
+}
+.rej3{
+    height: 50px;
+}
+.connections{
+    position: relative;
+    left: 350px;
+    bottom: 870px;
+}
+.numbersIhave{
+    position: relative;
+    color: white;
+    text-align: right;
+    font-size: X-large;
+    right: 20px;
+}
+.connectionsBotm{
+    width: 300px;
+    height: 300px;
+    background-color: lightcyan;
+    border-color: 2px black;
+    border-style: solid;
+    border-color: black black black black;   
+}
+.img3{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.acc3{
+    position: relative;
+    left: 60px;
+    bottom: 290px;
+    font-size: xx-large;
+    padding: .75rem;
+}
+.acc5{
+    position: relative;
+    bottom: 280px;
+    left: 20px;
+}
+a{
+    color: blue;
+    text-decoration: underline;
+}

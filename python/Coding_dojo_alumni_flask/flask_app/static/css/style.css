@@ -55,6 +55,21 @@
     width: 700px;
     height: 900px;
 }
+
+/* .button:hover {
+    background-color: #f4511e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+} */
 /* .sub-content{
     margin-top: 10px;
     margin-bottom: 10px;
@@ -81,4 +96,12 @@ img{
 }
 .text2{
     padding: 1.5rem;
+}
+
+
+.example:nth-child(1){
+    display: block;
+}
+.example:nth-child(2){
+    display: block;
 }

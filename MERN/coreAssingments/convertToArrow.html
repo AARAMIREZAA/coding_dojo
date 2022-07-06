@@ -37,19 +37,12 @@
         document.getElementById("hover-this").onmouseout = function(){
             setBackgroundColorById("body", "white");
         }
-        // function getValueFromId(id){
-        //     return document.getElementById(id).value;
-        // }
-        const getValueFromId =(name) => document.getElementById(id).value;
         
-        // function setBackgroundColorById(id, color){
-        //     document.getElementById(id).style = "background-color: " + color;
-        // }
-        const setBackgroundColorById = (name) => document.getElementById(id).style = "background-color: " + color;
+        const getValueFromId(id) =(name) => document.getElementById(id).value;
         
-        function mouseOverFunction(el){
-            el.style = "background-color: black";
-        }
+        const setBackgroundColorById(id, color) = (name) => document.getElementById(id).style = "background-color: " + color;
+        
+        const mouseOverFunction(el) => el.style = "background-color: black";
     </script>
 </body>
 </html>

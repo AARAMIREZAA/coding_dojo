@@ -14,6 +14,7 @@ function App() {
           <li>Feed the dogs</li>
         </ul>
       </div>
+      <personCard name="Edward Im" age={31} location="Alhambra" hairColor="black"/>
     </div>
   );
 }

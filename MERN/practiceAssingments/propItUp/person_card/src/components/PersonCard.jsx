@@ -2,10 +2,10 @@ import React, {Component} from "react"
 
 
 class PersonCard extends Component{
-    constructor(props) {
+    constructor(props){
         super(props);
-        this.state = {
-            {this.props.age:} 0,
+        this.state = { 
+            count: this.props.age,
         };
     }
     render(){
@@ -13,9 +13,9 @@ class PersonCard extends Component{
             <div>
                 {/* <legend>personCard.jsx</legend> */}
                 <h1>{this.props.lastName}, {this.props.firstName}</h1>
-                <h2>Age: {this.props.age}</h2>
+                <h2>Age: {this.state.count}</h2>
                 <h2>Hair Color: {this.props.hairColor}</h2>
-                <button onClick={() => this.setState({ this.props.age: 1})}>Birthday button for {this.props.firstName}</button>
+                <button onClick={() =>{ this.setState({ count: this.state.count+1})}}>Birthday button for {this.props.firstName}</button>
             </div>
         )
     }

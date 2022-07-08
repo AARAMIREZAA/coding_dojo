@@ -103,13 +103,13 @@ const UserForm = () => {
                     {
                         (passwordValid) ? null : <h1>Password must be at least 8 characters</h1>
                     }
-                    {
-                        (confirmPasswordValid) ? null : <h1>Password must be at least 8 characters</h1>
-                    }
                 </div>
                 <div>
                     <label> Confirm Password: </label>
-                    <input type="text" onChange={(e) => setConfirmpassword(e.target.value)} />
+                    <input type="text" onChange={(e) => confirmPasswordHandler(e.target.value)} />
+                    {
+                        (confirmPasswordValid) ? null : <h1>Password must be at least 8 characters</h1>
+                    }
                 </div>
                 <input type="submit" value="Create User" />
             </form>

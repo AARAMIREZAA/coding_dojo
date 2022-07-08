@@ -16,7 +16,7 @@ import React from "react"
 //     );
 // }
 
-const PersonCard = props => {
+const PersonCard = (props) => {
     const [count, setCount] = useState(0);
     return(
         <div>

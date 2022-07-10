@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 
 const UserForm = () => {
     //state
-    const [firstname, setFirstname] = useState("");
-    const [lastname, setLastname] = useState("");
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
@@ -13,10 +13,11 @@ const UserForm = () => {
     const [lastNameValid, setlastNameValid] = useState(true)
     const [emailValid, setemailValid] = useState(true)
     const [passwordValid, setpasswordValid] = useState(true)
+    const [confirmPasswordValid, setConfirmPasswordValid] = useState(true)
 
     const createUser = (e) => {
         e.preventDefault();
-        const newUser = { firstname, lastname, email, password, confirmpassword };
+        const newUser = { firstName, lastName, email, password, confirmPassword };
         console.log("Welcome", newUser);
     };
 
@@ -24,7 +25,7 @@ const UserForm = () => {
     // Validations for first name, last name, email, password
 
     const firstNameHandler = (firstName) => {
-        setName(firstName)
+        setFirstName(firstName)
         if (firstName.length < 2) {
             setfirstNameValid(false)
         }
@@ -34,6 +35,7 @@ const UserForm = () => {
     }
 
     const lastNameHandler = (lastName) => {
+        setLastName(lastName)
         if (lastName.length < 2) {
             setlastNameValid(false)
         }
@@ -43,6 +45,7 @@ const UserForm = () => {
     }
 
     const emailHandler = (email) => {
+        setEmail(email)
         if (email.length < 5) {
             setemailValid(false)
         }
@@ -52,6 +55,7 @@ const UserForm = () => {
     }
 
     const passwordHandler = (password) => {
+        setPassword(password)
         if (password.length < 8) {
             setpasswordValid(false)
         }
@@ -60,15 +64,16 @@ const UserForm = () => {
         }
     }
 
-    const confirmPasswordHandler = (confirmPassword) => {
-        if (password.length < 8) {
-            setpasswordValid(false)
+    const confirmPasswordHandler = (password, confirmPassword) => {
+        setConfirmPassword(confirmPassword)
+        if (password != confirmPassword) {
+        // if (confirmPasswordHandler == passwordHandler) {
+            setConfirmPasswordValid(false)
         }
         else {
-            setpasswordValid(true)
+            setConfirmPasswordValid(true)
         }
     }
-
 
 
 
@@ -106,9 +111,9 @@ const UserForm = () => {
                 </div>
                 <div>
                     <label> Confirm Password: </label>
-                    <input type="text" onChange={(e) => confirmPasswordHandler(e.target.value)} />
+                    <input type="password" onChange={(e) => confirmPasswordHandler(e.target.value)} Password="Password"/>
                     {
-                        (confirmPasswordValid) ? null : <h1>Password must be at least 8 characters</h1>
+                        (confirmPasswordValid) ? null : <h1>Passwords must match</h1>
                     }
                 </div>
                 <input type="submit" value="Create User" />

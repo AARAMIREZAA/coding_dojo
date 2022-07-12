@@ -4,9 +4,9 @@ import './App.css';
 import Todo from './components/todo';
 
 function App() {
-
-const [newTodo, setNewTodo] = useState("");
-const [todos, setTodos] = useState([]);
+  //STATE
+  const [todos, setTodos] = useState([]);
+  const [newTodo, setNewTodo] = useState("");
 
 const hanldeNewToDoSubmit = (event) => {
   event.preventDefault();

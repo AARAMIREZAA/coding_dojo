@@ -66,7 +66,7 @@ const UserForm = () => {
 
     const confirmPasswordHandler = (password, confirmPassword) => {
         setConfirmPassword(confirmPassword)
-        if (password != confirmPassword) {
+        if (password !== confirmPassword) {
         // if (confirmPasswordHandler == passwordHandler) {
             setConfirmPasswordValid(false)
         }

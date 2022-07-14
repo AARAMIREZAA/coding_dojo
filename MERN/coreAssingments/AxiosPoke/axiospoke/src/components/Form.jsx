@@ -24,6 +24,7 @@ const Form = () => {
                 <button onClick={buttonHandler} className='pkBtn'>Fetch Pokemon</button>
             </div>
 
+            //Conditional rendering, ternary
             <div>
             {
                 pokemons.map((pokemon) => {

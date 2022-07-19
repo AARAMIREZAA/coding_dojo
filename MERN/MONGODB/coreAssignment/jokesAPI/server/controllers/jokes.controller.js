@@ -16,6 +16,11 @@ module.exports.getAllJokes = (req, res) => {
 }
 
 // READ ONE
+module.exports.getOneJoke = (req, res) => {
+    Joke.findOne({_id : req.params.joke_id})
+        .then(oneJoke => res.json(oneJoke) )
+        .catch(error => res.json(error))
+}
 
 // UPDATE
 

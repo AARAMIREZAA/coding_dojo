@@ -1,5 +1,5 @@
 // IMPORT CONTROLLER
-const userController = require("../controllers/user.controllers")
+const jokeController = require("../controllers/joke.controllers")
 
 module.exports = (app) => {
     app.post("/api/jokes", jokeController.createJoke)

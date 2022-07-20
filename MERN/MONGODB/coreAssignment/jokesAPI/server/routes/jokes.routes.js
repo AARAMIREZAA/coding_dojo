@@ -1,10 +1,12 @@
 // IMPORT CONTROLLER
-const jokeController = require("../controllers/joke.controllers")
+const jokesController = require("../controllers/jokes.controller")
 
+// DEFINE ROUTES
 module.exports = (app) => {
-    app.post("/api/jokes", jokeController.createJoke)
-    app.get("/api/jokes", jokeController.getAllJokes)
-    app.get("/api/jokes/:joke_id", jokeController.getOneJoke)
-    app.put("/api/jokes/:joke_id", jokeController.updateJoke)
-    app.delete("/api/jokes/:joke_id", jokeController.destroyJoke)
+    app.get("/api/test", jokesController.test)
+    app.post("/api/joke", jokesController.createJoke)
+    app.get("/api/joke", jokesController.getAllJokes)
+    app.get("/api/joke/:id", jokesController.getOneJoke)
+    app.put("/api/joke/:joke_id", jokesController.updateJoke)
+    app.delete("/api/joke/:joke_id", jokesController.destroyJoke)
 }

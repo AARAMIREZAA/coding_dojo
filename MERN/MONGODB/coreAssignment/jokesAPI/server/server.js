@@ -1,25 +1,23 @@
-// 1. IMPORT YOUR DEPENDENCIES
+// IMPORT DEPENDECIES
 const express = require("express");
-const cors = require("cors")
 
-// 2. INSTANTIATE AN EXPRESS SERVER
+// INSTANTIATE AN EXPRESS SERVER
 const app = express();
 const port = 8000;
 
-// 2.25 START YOUR MONGOOSE CONFIG
+// START MONGOOSE CONFIG
 require("./config/mongoose.config");
 
 
-// 2.5 SETUP MIDDLEWARE
+// SETUP MIDDLEWARE
+    // ALLOWING USE OF JSON
 app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
-app.use(cors())
+    // ALLOWING USE OF POST REQUEST INFO
+app.use(express.urlencoded({extended: true}))
 
+// DEFINE API ENDPOINTS
+const jokesRoutes = require("./routes/jokes.routes")
+jokesRoutes(app)
 
-// 3. DEFINE YOUR API ENDPOINTS
-const jokeRoutes = require("./routes/joke.routes")
-jokeRoutes(app)
-
-
-// 4. RUN YOUR EXPRESS SERVER
-app.listen(port, () => console.log('Listening on port 8000'));
+// RUN EXPRESS SERVER
+app.listen(port, () => console.log("Listening on port 8000"));

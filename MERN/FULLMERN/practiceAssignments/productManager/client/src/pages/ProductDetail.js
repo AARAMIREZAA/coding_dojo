@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const DetailProduct = () => {
+const ProductDetail = () => {
     // STATE
     const [product, setProduct] = useState()
 
@@ -33,5 +33,5 @@ const DetailProduct = () => {
     )
 }
 
-export default DetailProduct
+export default ProductDetail
 

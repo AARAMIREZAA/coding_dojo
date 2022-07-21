@@ -18,7 +18,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(cors())
 
 // DEFINE API ENDPOINTS
-const productManagerRoutes = require("./routes/productManager.routes")
+const productManagerRoutes = require("./routes/product.routes")
 productManagerRoutes(app)
 
 // RUN EXPRESS SERVER

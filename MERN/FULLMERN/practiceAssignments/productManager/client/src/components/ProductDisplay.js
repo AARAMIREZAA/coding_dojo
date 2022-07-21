@@ -6,8 +6,8 @@ import axios from 'axios';
 const ProductDisplay = (props) => {
 
     // DESTRUCTURE
-    const {products, refresh} = props
-    
+    const { products, refresh } = props
+
 
     // DELETE FUNCTION
     const destroyProduct = (product_id) => {
@@ -17,39 +17,30 @@ const ProductDisplay = (props) => {
             .catch(error => console.log(error))
     }
 
-  return (
-    <div className='container m-auto mt-5'>
-        <table className='border p-3'>
-            <thead>
-                <tr>
-                    <td>Title</td>
-                    <td>Price</td>
-                    <td>Description</td>
-                    <td>Action</td>
-                </tr>
-            </thead>
-            <tbody>
-                {
-                    products.map((product) => {
-                        return (
-                            <tr key={product._id}>
-                                <td>
-                                    <Link to={"/" + product._id}>{product.title}</Link>
-                                </td>
-                                <td>{product.price}</td>
-                                <td>{product.description}</td>
-                                <td>
-                                    <Link to={"/"+product._id+"/edit"}>Edit </Link> |
-                                    <button onClick={() => destroyProduct(product._id)} className='btn btn-outline-danger'> Delete</button>
-                                </td>
-                            </tr>
-                        )
-                    })
-                }
-            </tbody>
-        </table>
-    </div>
-  )
+    return (
+        <div className='container m-auto mt-5'>
+            <table className='border p-3'>
+                <h1>All Products</h1>
+                <tbody>
+                    {
+                        products.map((product) => {
+                            return (
+                                <tr key={product._id}>
+                                    <td>
+                                        <Link to={"/" + product._id}>{product.title}</Link>
+                                    </td>
+                                    <td>
+                                        <Link to={"/" + product._id + "/edit"}>Edit </Link> |
+                                        <button onClick={() => destroyProduct(product._id)} className='btn btn-outline-danger'> Delete</button>
+                                    </td>
+                                </tr>
+                            )
+                        })
+                    }
+                </tbody>
+            </table>
+        </div>
+    )
 }
 
 export default ProductDisplay

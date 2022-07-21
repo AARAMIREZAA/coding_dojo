@@ -1,28 +1,35 @@
-import React, { useEffect, useState } from 'react'
-import ProductForm from '../components/ProductForm';
-import ProductList from '../components/ProductList';
+import React, { useEffect } from 'react'
+import ProductForm from '../components/ProductForm'
+import { useState } from 'react'
+import axios from 'axios'
+import ProductDisplay from '../components/ProductDisplay'
 
-const Main = (props) => {
-    const [product, setProduct] = useState([]);
-    const [loaded, setLoaded] = useState(false);
+const Main = () => {
+    // STATE
+    const [products, setProducts] = useState([])
 
+    // STATE REFRESH
+    const [submitted, setSubmitted] = useState(false)
+
+    // CONST REFRESH EMPTY ARROW FUNCTION
+    const refresh = () => {
+        setSubmitted(!submitted)
+    }
+
+    // USE EFFECT AXIOS
     useEffect(() => {
-        axios.get('http://localhost:8000/api/product')
-            .then(res => {
-                setProduct(res.data);
-                setLoaded(true);
-            })
-            .catch(err => console.error(err));
-    }, []);
+        axios.get("http://localhost:8000/api/products")
+            .then(res => setProducts(res.data))
+            .catch(error => console.log(error))
+    }, [submitted])
+
 
     return (
         <div>
-            <ProductForm />
-            <hr />
-            {loaded && <ProductList product={product} />}
+            <ProductForm refresh={refresh} />
+            <ProductDisplay products={products} refresh={refresh} />
         </div>
     )
 }
 
-export default Main;
-
+export default Main

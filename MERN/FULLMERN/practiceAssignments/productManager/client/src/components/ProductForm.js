@@ -1,41 +1,50 @@
 import React, { useState } from 'react'
-import axios from 'axios';
-export default () => {
-    //keep track of what is being typed via useState hook
-    const [title, setTitle] = useState("");
-    const [price, setPrice] = useState("");
-    const [description, setDescription] = useState("");
-    //handler when the form is submitted
-    const onSubmitHandler = e => {
-        //prevent default behavior of the submit
-        e.preventDefault();
-        //make a post request to create a new product
-        axios.post('http://localhost:8000/api/product', {
-            title,
-            price,
-            description
-        })
-            .then(res=>console.log(res))
-            .catch(err=>console.log(err))
-    }
-    //onChange to update product, title, price, and description
-    return (
-        <form onSubmit={onSubmitHandler}>
-            <h1>Product Manager</h1>
-            <p>
-                <label>Title</label><br/>
-                <input type="text" onChange={(e)=>setTitle(e.target.value)} value={title}/>
-            </p>
-            <p>
-                <label>Price</label><br/>
-                <input type="text" onChange={(e)=>setPrice(e.target.value)} value={price}/>
-            </p>
-            <p>
-                <label>Description</label><br/>
-                <input type="text" onChange={(e)=>setDescription(e.target.value)} value={description}/>
-            </p>
-            <input type="submit"/>
-        </form>
-    )
+import 'bootstrap/dist/css/bootstrap.min.css';
+import axios from 'axios'
+
+const ProductForm = (props) => {
+	// STATE
+	const [title, setTitle] = useState()
+	const [price, setPrice] = useState()
+	const [description, setDescription] = useState()
+
+	// DESTRUCTURE REFRESH FUNCTION
+	const {refresh} = props
+
+	const createProduct = (e) => {
+		e.preventDefault();
+		const productObj = {
+			title,
+			price,
+			description
+		}
+	
+		// AXIOS POST
+		axios.post("http://localhost:8000/api/products", productObj)
+			.then(newProduct => refresh())
+			.catch(error => console.log(error))
+	}
+
+  return (
+    <div className='container w-50'>
+        <h2>Product</h2>
+		<form onSubmit={createProduct}>
+			<div className="row mb-3">
+				<label className="col-sm-2 col-form-label">Title:</label>
+				<input onChange={(e) => setTitle(e.target.value)} name="title" type="text" className="form-control"/>
+				</div>
+				<div className="row mb-3">
+				<label className="col-sm-2 col-form-label">Price:</label>
+				<input onChange={(e) => setPrice(e.target.value)} name='price' type="number" className="form-control"/>
+				</div>
+				<div className="row mb-3">
+				<label className="col-sm-2 col-form-label">Description:</label>
+				<input onChange={(e) => setDescription(e.target.value)} name='description' type="text" className="form-control"/>
+				</div>
+			<button type="submit" className="btn btn-primary float-end">add</button>
+		</form>
+    </div>
+  )
 }
 
+export default ProductForm

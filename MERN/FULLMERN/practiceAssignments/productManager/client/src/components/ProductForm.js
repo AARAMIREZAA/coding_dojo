@@ -9,8 +9,8 @@ export default () => {
     const onSubmitHandler = e => {
         //prevent default behavior of the submit
         e.preventDefault();
-        //make a post request to create a new person
-        axios.post('http://localhost:8000/api/people', {
+        //make a post request to create a new product
+        axios.post('http://localhost:8000/api/product', {
             title,
             price,
             description
@@ -18,7 +18,7 @@ export default () => {
             .then(res=>console.log(res))
             .catch(err=>console.log(err))
     }
-    //onChange to update firstName and lastName
+    //onChange to update product, title, price, and description
     return (
         <form onSubmit={onSubmitHandler}>
             <h1>Product Manager</h1>

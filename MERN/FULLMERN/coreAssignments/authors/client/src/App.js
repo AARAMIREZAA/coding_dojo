@@ -1,10 +1,21 @@
 import './App.css';
+import {Route, Routes} from "react-router-dom"
+import Create from './pages/Create';
+import Dashboard from './pages/Dashboard';
+import Detail from './pages/Detail';
+import Edit from './pages/Edit'
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <fieldset>
+      <legend>App.js</legend>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/recipes/new" element={<Create />} />
+        <Route path="/recipes/:recipe_id" element={<Detail />} />
+        <Route path="/recipes/edit/:recipe_id" element={<Edit />} />
+      </Routes>
+    </fieldset>
   );
 }
 
